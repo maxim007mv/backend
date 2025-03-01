@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: route-planner-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3005
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: YANDEX_API_KEY
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: FRONTEND_URL
+        value: https://cocos27-kataifi-c752b7.netlify.app 
